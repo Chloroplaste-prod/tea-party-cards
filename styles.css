@@ -1,95 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap');
 
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #f9fafb 0%, #e1e8ef 100%);
-    font-family: 'Josefin Sans', Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: url('assets/floral-bg.jpg') repeat, #f2efe7;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
-    background: rgba(255,255,255,0.7);
-    border-radius: 24px;
-    box-shadow: 0 12px 40px rgba(120,80,220,0.10);
-    padding: 2em 1.5em 1.5em 1.5em;
-    max-width: 380px;
-    width: 100%;
-    text-align: center;
-    backdrop-filter: blur(8px);
+  position: relative;
+  background: 
+    url('assets/paper-fiber.jpg') repeat, 
+    #fffbe8;
+  border-radius: 36px;
+  border: 16px solid transparent;
+  border-image: url('assets/lace-border.png') 48 stretch;
+  box-shadow: 0 10px 38px 0 #af9b8c44, 0 2px 0 #e1cfc2 inset;
+  max-width: 410px;
+  margin: 3em auto 0 auto;
+  padding: 3.5em 2em 2em 2em;
+  text-align: center;
+}
+
+.ribbon {
+  position: absolute;
+  top: -56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: 72px;
+  background: url('assets/ribbon.png') no-repeat center/contain;
+  z-index: 10;
+}
+
+.teapot-icon {
+  width: 64px;
+  margin: 0 auto 0.8em auto;
+  display: block;
 }
 
 h1 {
-    font-size: 2.1em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #6850c7;
-    margin-bottom: 0.2em;
-    text-shadow: 0 2px 16px #e0e7ff99;
+  font-family: 'Great Vibes', cursive;
+  color: #a57090;
+  font-size: 2.2em;
+  margin-top: 0.25em;
+  margin-bottom: 0.05em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 14px #fff9, 0 1px 0 #b58989;
 }
 
 .subtitle {
-    font-size: 1.05em;
-    color: #9695c1;
-    margin-bottom: 1.5em;
-    letter-spacing: 0.2em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2em;
+  color: #73665a;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.03em;
 }
 
 #drawBtn {
-    padding: 1em 2em;
-    font-size: 1.1em;
-    background: linear-gradient(90deg, #d0caff 30%, #c1e1fd 100%);
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px #a2b5ec33;
-    color: #4b3666;
-    font-family: inherit;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
+  font-family: 'Cormorant Garamond', serif;
+  background: url('assets/ribbon-btn.png') center/cover, #e9c9d1;
+  color: #65475a;
+  border: none;
+  border-radius: 24px;
+  padding: 1.1em 2.7em;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 16px #c9b6a577;
+  cursor: pointer;
+  margin-top: 1.5em;
+  margin-bottom: 1.1em;
+  transition: background 0.2s, transform 0.12s;
+  position: relative;
+  z-index: 1;
+}
+#drawBtn span {
+  position: relative;
+  z-index: 2;
+}
+#drawBtn:hover {
+  background-color: #f1dce1;
+  transform: translateY(-2px) scale(1.04);
 }
 
-    #drawBtn:hover {
-        background: linear-gradient(90deg, #eee8fc 30%, #c9f7f7 100%);
-        transform: translateY(-2px) scale(1.04);
-    }
-
 #cardDisplay {
-    margin-top: 2em;
-    min-height: 120px;
+  margin-top: 2em;
+  min-height: 130px;
 }
 
 .card-img {
-    width: 150px;
-    border-radius: 14px;
-    box-shadow: 0 4px 24px #a2b5ec44;
-    margin-bottom: 1em;
+  width: 170px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px #a2b5ec33;
+  margin-bottom: 1em;
+  border: 3px solid #d4beaf;
+  background: #f5f1e6;
 }
 
 .card-title {
-    font-size: 1.35em;
-    color: #9479d5;
-    margin-bottom: 0.25em;
-    letter-spacing: 1px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: #a57090;
+  margin-bottom: 0.15em;
 }
 
 .card-desc {
-    font-size: 1.08em;
-    color: #5a4c7c;
-    margin-bottom: 1.5em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12em;
+  color: #73665a;
+  margin-bottom: 1.1em;
+  background: #fff8f6b0;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 0.5em 1em;
+  box-shadow: 0 1px 7px #e9dbd466;
 }
 
 footer {
-    margin-top: 2.5em;
-    font-size: 0.9em;
-    color: #a6a8ba;
-    opacity: 0.85;
+  margin-top: 2em;
+  font-size: 1em;
+  color: #baa5a3;
+  opacity: 0.88;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .footer-text {
-    margin: 0;
-    font-size: 1em;
+  margin: 0;
+  font-size: 1em;
 }
